@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A special place dedicated to Ashmita - filled with heartfelt words, shayari, and poetry.">
+  <title>For Ashmita | A Heartfelt Dedication</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas background for particles -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Ambient music toggle -->
+  <div class="audio-toggle" id="audio-toggle-btn" title="Play gentle ambient music">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="music-icon"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+    <span class="audio-label">Play Music</span>
+  </div>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="#" class="logo">For <span class="name-highlight">Ashmita</span> <span class="heart-pulse">❤️</span></a>
+      <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="nav-menu">
+        <a href="#letter">The Letter</a>
+        <a href="#shayari">Shayari</a>
+        <a href="#garden">Flower Garden</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>To the one who makes <br><span class="highlight">the world brighter</span></h1>
+        <p><span class="name-highlight">Ashmita</span>, this is just a quiet corner for you—a small space filled with poetry and thoughts that came to mind whenever I thought of you. No matter how you explore it, I hope it acts as a quiet, warm embrace from afar, reminding you how much you are cherished.</p>
+        <div class="hero-actions">
+          <a href="#letter" class="btn btn-primary">Open My Letter</a>
+          <a href="#garden" class="btn btn-secondary">Explore the Garden</a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span>Scroll to explore</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+    </section>
+
+    <!-- Interactive Letter Section -->
+    <section class="section" id="letter">
+      <div class="container text-center">
+        <h2 class="section-title">A Letter From The Heart</h2>
+        <p class="section-subtitle">Click the envelope below to open it and read a poem written just for you.</p>
+        
+        <div class="envelope-wrapper">
+          <div class="envelope" id="envelope-elem">
+            <div class="flap"></div>
+            <div class="pocket"></div>
+            <div class="letter-card" id="letter-card-elem">
+              <div class="letter-content">
+                <h3>Dear <span class="name-highlight">Ashmita</span>,</h3>
+                <p class="poem-line">In a world of noise, you are my quiet song,</p>
+                <p class="poem-line">A gentle light where all my thoughts belong.</p>
+                <p class="poem-line">It’s in the quiet way you speak, the warmth you share,</p>
+                <p class="poem-line">A simple truth that shows how much I care.</p>
+                <br>
+                <p class="poem-line">No grandeur needed, no dramatic play,</p>
+                <p class="poem-line">Just wishing to brighten each and every day.</p>
+                <p class="poem-line">I watch you chase your dreams, so brave and free,</p>
+                <p class="poem-line">And hope that you find joy in all you see.</p>
+                <br>
+                <p class="poem-line">For words are fleeting, but the actions stand,</p>
+                <p class="poem-line">A quiet promise, like writing in the sand.</p>
+                <p class="poem-line">I'm here to support you, to listen, to care,</p>
+                <p class="poem-line">Whenever you need, I'll always be there.</p>
+                <p class="letter-signature">With sincere warmth,</p>
+              </div>
+            </div>
+            <div class="envelope-heart-seal" id="seal-elem">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+        <div class="letter-instruction" id="letter-instruction-text">
+          Click the seal to read the poem
+        </div>
+      </div>
+    </section>
+
+    <!-- Shayari Section -->
+    <section class="section alt" id="shayari">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">ज़ज़्बात दिल के</h2>
+        </div>
+
+        <div class="shayari-grid">
+          <!-- Card 1 -->
+          <div class="shayari-card fade-in">
+            <div class="card-icon">✨</div>
+            <p class="shayari-hindi">आपसे मिलकर लगा कि जैसे कोई पुराना ख़्वाब मुकम्मल हो गया,<br>जो दिल कभी ख़ामोश था, वो आज आपमें खो गया।</p>
+            <p class="shayari-translation">"Meeting you felt like a long-lost dream finally coming true; the heart that was once silent has now lost itself in you."</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="shayari-card fade-in">
+            <div class="card-icon">🌸</div>
+            <p class="shayari-hindi">आपकी मुस्कुराहट से ही रोशन है जहाँ मेरा,<br>आप जहाँ भी रहें, बस खुश रहें, यही है अरमान मेरा।</p>
+            <p class="shayari-translation">"My world is illuminated by your beautiful smile; wherever you may go, my only true wish is for you to be happy."</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="shayari-card fade-in">
+            <div class="card-icon">🌟</div>
+            <p class="shayari-hindi">हज़ार महफ़िलें हों और लाखों मेले हों,<br>पर जहाँ आप नहीं, वहाँ हम बिल्कुल अकेले हैं।</p>
+            <p class="shayari-translation">"There may be a thousand gatherings and millions of events, but in a place without you, I am entirely alone."</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="shayari-card fade-in">
+            <div class="card-icon">💫</div>
+            <p class="shayari-hindi">हवाओं में एक प्यारा सा अहसास रहता है,<br>जब से आपसे बात हुई है, दिल कुछ ख़ास रहता है।</p>
+            <p class="shayari-translation">"A sweet gentle breeze seems to surround me; ever since we spoke, my heart beats in a special rhythm."</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="shayari-card fade-in">
+            <div class="card-icon">🌙</div>
+            <p class="shayari-hindi">आपकी सादगी ही सबसे हसीं लगती है,<br>जैसे अंधेरी रातों में कोई शमा जलती है।</p>
+            <p class="shayari-translation">"Your simplicity is what looks most beautiful; like a candle glowing softly in the dark night."</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="shayari-card fade-in">
+            <div class="card-icon">🍃</div>
+            <p class="shayari-hindi">आपको सोचना भी सुकून का एक पल दे जाता है,<br>जैसे तपती धूप में कोई साया मिल जाता है।</p>
+            <p class="shayari-translation">"Just thinking of you brings a moment of deep peace; like finding a comforting shade under a blazing sun."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Interactive Garden Section -->
+    <section class="section alt" id="garden">
+      <div class="container text-center">
+        <h2 class="section-title"><span class="name-highlight">Ashmita</span>'s Secret Garden</h2>
+        <p class="section-subtitle">Click anywhere in the garden grid below to plant a seed and watch a unique flower bloom with a sweet thought for you.</p>
+        
+        <div class="garden-grid" id="garden-grid-container">
+          <!-- Flower slots will be placed here dynamically -->
+        </div>
+
+        <div class="garden-stats">
+          Flowers Bloomed: <span id="bloom-counter">0</span> / 9
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Call to Action / Splash -->
+    <section class="section final-cta">
+      <div class="container text-center">
+        <div class="heart-pulse-large">💖</div>
+        <h2>Thank you for being you, <span class="name-highlight">Ashmita</span>.</h2>
+        <p>I hope this brought a gentle smile to your face.</p>
+        <button class="btn btn-primary" id="btn-send-love">Send a Heart Burst</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container text-center">
+      <p>© 2026. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- HTML5 Audio element for romantic bg music -->
+  <audio id="bg-audio" loop>
+    <source src="Tum%20Se%20Hi%20Jab%20We%20Met%20320%20Kbps.mp3" type="audio/mp3">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
